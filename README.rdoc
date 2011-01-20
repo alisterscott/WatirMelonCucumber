@@ -12,12 +12,12 @@ This is a simple, working Cucumber + Watir framework, where pages are defined an
 
 === Mac OSX / Linux
 
-1. ensure you have [RVM (Ruby Version Manager)](http://rvm.beginrescueend.com/ "RVM") installed 
+1. ensure you have RVM (Ruby Version Manager) installed: http://rvm.beginrescueend.com/
 2. run ./go in the root directory: this will bootstrap everything needed and run the cucumber feature
 
 === Windows
 
-1. Install JRuby, Pik, Bundler and Wac (see [my blog post](http://watirmelon.com/2011/01/17/easily-manage-your-rubies-with-rvm-bundler-and-pik/ "WatirMelon") for howto)
+1. Install JRuby, Pik, Bundler and Wac (see my blog post: http://wp.me/p98zF-ca)
 2. Make sure you 'pik' JRuby
 3. In root directory, run 'bundle install'
 4. Then run 'cucumber'
