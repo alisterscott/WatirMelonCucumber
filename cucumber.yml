@@ -1,0 +1,2 @@
+default: -r features --tags ~@wip --color --format pretty --format html -o results.html
+ci  : -r features HEADLESS=TRUE --tags ~@wip --color --format pretty --format html -o results.html

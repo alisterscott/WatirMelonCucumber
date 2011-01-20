@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+gem "cucumber"
+gem "rspec"
+gem "celerity"
+gem "watir-webdriver"
