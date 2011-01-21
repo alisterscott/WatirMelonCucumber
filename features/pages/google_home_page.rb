@@ -18,10 +18,6 @@ class GoogleHomePage
     @browser.goto URLS[:production]
   end
 
-  def page_title
-    @browser.title
-  end
-
   def search_for term
     self.search_field.set term
     self.google_search_button.click
