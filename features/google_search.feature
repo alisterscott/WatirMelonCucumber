@@ -1,4 +1,7 @@
 Feature: Google Search
+  As a casual internet user
+  I want to find some information about watir, and do a quick conversion
+  So that I can be knowledgeable being
 
 Scenario: Search for Watir
   Given I am on the Google Home Page

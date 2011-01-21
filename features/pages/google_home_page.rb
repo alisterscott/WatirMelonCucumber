@@ -1,23 +1,25 @@
-class GoogleHomePage < DelegateClass(BROWSER_CLASS)
+class GoogleHomePage
 
   attr_accessor :search_field, :google_search_button
 
-  URLS = {
-    :production => "http://www.google.com/"
-  }
+  URLS = { :production => "http://www.google.com/" }
 
   def initialize(browser)
-    super(browser)
-    @search_field         = self.text_field(:name => "q")
-    @google_search_button = self.button(:name => "btnG")
+    @browser = browser
+    @search_field         = @browser.text_field(:name => "q")
+    @google_search_button = @browser.button(:name => "btnG")
+  end
+
+  def method_missing(sym, *args, &block)
+    @browser.send sym, *args, &block
   end
 
   def visit
-    self.goto URLS[:production]
+    @browser.goto URLS[:production]
   end
 
   def page_title
-    self.title
+    @browser.title
   end
 
   def search_for term

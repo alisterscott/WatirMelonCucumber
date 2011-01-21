@@ -13,13 +13,12 @@ When /^I search for a?n? ?([^"].+[^"])$/ do |term|
 end
 
 Then /^I should see at least ([\d,]+) results$/ do |exp_num_results|
-  Common.string_to_f(@google_results_page.number_search_results).should >= Common.string_to_f(exp_num_results)
+  @google_results_page.number_search_results.should >= exp_num_results.gsub(",","").to_i
 end
 
 Then /^I should see at most ([\d,]+) results$/ do |exp_num_results|
-  Common.string_to_f(@google_results_page.number_search_results).should <= Common.string_to_f(exp_num_results)
+  @google_results_page.number_search_results.should <= exp_num_results.gsub(",","").to_i
 end
-
 
 When /^I convert (.+)$/ do |conversion_statement|
   @google_results_page = @google_home_page.search_for "convert #{conversion_statement}"
