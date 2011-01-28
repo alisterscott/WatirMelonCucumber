@@ -1,4 +1,4 @@
-TEST_DATA_DIR = "./features/test_data"
+TEST_DATA_DIR = "./features/support/test_data"
 
 if ENV["HEADLESS"] then
   require "celerity"
@@ -12,8 +12,6 @@ else
   INDEX_OFFSET = -1
   WEBDRIVER = true
 end
-
-BROWSER_CLASS = browser.class
 
 Before do
   @browser = browser
