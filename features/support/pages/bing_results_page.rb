@@ -4,10 +4,10 @@ class BingResultsPage
   attr_accessor :results, :conversion_result
 
   def initialize(browser)
-    super
     @browser = browser
     @results = @browser.span(:id => "count")
     @conversion_result = @browser.span(:class => "sc_bigLine")
+    super
   end
 
   def number_search_results

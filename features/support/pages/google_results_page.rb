@@ -4,10 +4,10 @@ class GoogleResultsPage
   attr_accessor :results, :conversion_result
 
   def initialize(browser)
-    super
     @browser = browser
     @results = @browser.div(:id => "resultStats")
     @conversion_result = self.h2(:class => "r")
+    super
   end
 
 

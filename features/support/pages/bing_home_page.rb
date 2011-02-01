@@ -6,10 +6,9 @@ class BingHomePage
   URLS = { :production => "http://www.bing.com/" }
 
   def initialize browser
-    super
     @browser = browser
-    @search_field         = @browser.text_field(:name => "q")
     @bing_search_button  = @browser.button(:name => "go")
+    super
   end
 
   def visit

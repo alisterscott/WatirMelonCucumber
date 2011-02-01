@@ -6,10 +6,9 @@ class GoogleHomePage
   URLS = { :production => "http://www.google.com/" }
 
   def initialize(browser)
-    super
     @browser = browser
-    @search_field         = @browser.text_field(:name => "q")
     @google_search_button = @browser.button(:name => "btnG")
+    super
   end
 
   def visit
@@ -23,5 +22,4 @@ class GoogleHomePage
     google_results_page.results.wait_until_present if WEBDRIVER
     google_results_page
   end
-
 end
