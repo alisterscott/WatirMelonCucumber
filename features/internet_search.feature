@@ -10,7 +10,7 @@ Feature: Internet Search
     Scenarios:
       | search engine | expected number of  |
       | Google        | 100,000             |
-      | Bing          |  80,000             |
+      | Bing          |  30,000             |
 
   Scenario Outline: Do a unit conversion
     Given I am on the <search engine> Home Page
@@ -18,13 +18,12 @@ Feature: Internet Search
     Then I should see the conversion result "<as expected>"
     Scenarios:
       | search engine | as expected                         |
-      | Google        | 10 centimeters = 3.93700787 inches  |
-      | Bing          | 10 centimetres = 3.937007874 inches |
-
+      | Google        | 10 centimetres = 3.93700787 inches  |
+     
   Scenario Outline: Do a search using data specified externally
     Given I am on the <search engine> Home Page
     When I search for a ridiculously small number of results
-    Then I should see at most 10 results
+    Then I should see at most 100 results
     Scenarios:
       | search engine |
       | Google        |
