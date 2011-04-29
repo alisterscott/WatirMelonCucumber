@@ -11,11 +11,17 @@ GEM
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.5)
     diff-lcs (1.1.2)
+    ffi (1.0.7)
+      rake (>= 0.8.7)
     ffi (1.0.7-java)
+    gherkin (2.3.6)
+      json (>= 1.4.6)
     gherkin (2.3.6-java)
       json (>= 1.4.6)
+    json (1.5.1)
     json (1.5.1-java)
     json_pure (1.5.1)
+    rake (0.8.7)
     rspec (2.5.0)
       rspec-core (~> 2.5.0)
       rspec-expectations (~> 2.5.0)
@@ -36,6 +42,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   cucumber
