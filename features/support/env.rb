@@ -1,16 +1,13 @@
 TEST_DATA_DIR = "./features/support/test_data"
 
+require 'watir-webdriver'
+
 if ENV["HEADLESS"] then
-  require "celerity"
-  browser = Celerity::Browser.new
-  INDEX_OFFSET = 0
-  WEBDRIVER = false
+  include Selenium
+  capabilities = WebDriver::Remote::Capabilities.htmlunit(:javascript_enabled => true)
+  browser = Watir::Browser.new(:remote, :url => "http://127.0.0.1:4444/wd/hub", :desired_capabilities => capabilities)
 else
-  require 'watir-webdriver'
-  require 'watir-webdriver/extensions/wait'
-  browser = Watir::Browser.new :firefox
-  INDEX_OFFSET = -1
-  WEBDRIVER = true
+  browser = Watir::Browser.new :chrome
 end
 
 Before do

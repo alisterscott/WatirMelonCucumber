@@ -19,7 +19,7 @@ class BingHomePage
     self.search_field.set term
     self.bing_search_button.click
     bing_results_page = BingResultsPage.new(@browser)
-    bing_results_page.results.wait_until_present if WEBDRIVER
+    bing_results_page.results.wait_until_present
     bing_results_page
   end
 
