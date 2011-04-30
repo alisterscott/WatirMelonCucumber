@@ -1,5 +1,5 @@
 class BasePageClass
-  include WatirWebDriverHelper
+  include WatirPageHelper
 
   def initialize browser, visit = false
     @browser = browser
