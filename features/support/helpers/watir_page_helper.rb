@@ -1,4 +1,4 @@
-module WatirWebDriverHelper
+module WatirPageHelper
   # A helper mixin to make accessing web elements via Watir-WebDriver easier.
   # This module assumes there is a @browser variable available.
 
