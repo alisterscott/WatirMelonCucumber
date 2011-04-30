@@ -1,26 +1,15 @@
-class BingHomePage
-  include PageMixIn
+class BingHomePage < SearchPageClass
 
-  attr_accessor :search_field, :bing_search_button
+  direct_url "http://www.bing.com"
+  expected_title "Bing"
 
-  URLS = { :production => "http://www.bing.com/" }
-
-  def initialize browser
-    @browser = browser
-    @bing_search_button  = @browser.button(:name => "go")
-    super
-  end
-
-  def visit
-    @browser.goto URLS[:production]
-  end
+  #text_field :search, :name => "q"
+  button :bing_search, :name => "go"
 
   def search_for term
-    self.search_field.set term
-    self.bing_search_button.click
-    bing_results_page = BingResultsPage.new(@browser)
-    bing_results_page.results.wait_until_present
-    bing_results_page
+    self.search = term
+    bing_search
+    BingResultsPage.new(@browser)
   end
 
 end

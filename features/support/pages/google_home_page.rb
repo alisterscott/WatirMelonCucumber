@@ -1,25 +1,14 @@
-class GoogleHomePage
-  include PageMixIn
+class GoogleHomePage < SearchPageClass
 
-  attr_accessor :search_field, :google_search_button
+  direct_url "http://www.google.com"
+  expected_title "Google"
 
-  URLS = { :production => "http://www.google.com/" }
-
-  def initialize(browser)
-    @browser = browser
-    @google_search_button = @browser.button(:name => "btnG")
-    super
-  end
-
-  def visit
-    @browser.goto URLS[:production]
-  end
+  #text_field :search, :name => "q"
+  button :google_search, :name => "btnG"
 
   def search_for term
-    self.search_field.set term
-    self.google_search_button.click
-    google_results_page = GoogleResultsPage.new(@browser)
-    google_results_page.results.wait_until_present
-    google_results_page
+    self.search = term
+    google_search
+    GoogleResultsPage.new(@browser, false)
   end
 end

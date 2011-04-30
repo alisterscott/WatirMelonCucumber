@@ -1,18 +1,14 @@
-class BingResultsPage
-  include PageMixIn
+class BingResultsPage < BasePageClass
 
-  attr_accessor :results, :conversion_result
+  expected_title /.+ Bing/
+  expected_element :span, :id => "count"
 
-  def initialize(browser)
-    @browser = browser
-    @results = @browser.span(:id => "count")
-    @conversion_result = @browser.span(:class => "sc_bigLine")
-    super
-  end
+  span :results, :id => "count"
+  span :conversion_result, :class => "sc_bigline"
 
   def number_search_results
-    result = /^[\s\w-]* of ([\d,]+) results$/.match(@results.text)
-    raise "Could not determine number of search results from: '#{@results.text}'" if not result
+    result = /^[\s\w-]* of ([\d,]+) results$/.match(results)
+    raise "Could not determine number of search results from: '#{results}'" if not result
     result.captures[0].gsub(",","").to_i
   end
 

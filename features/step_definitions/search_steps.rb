@@ -1,6 +1,5 @@
 Given /^I am on the (.+)$/ do |page_name|
-  @home_page = Object.const_get(page_name.gsub(" ","")).new(@browser)
-  @home_page.visit
+  @home_page = Object.const_get(page_name.gsub(" ","")).new(@browser, true)
 end
 
 When /^I search for a? ?"([^"]*)"$/ do |term|
@@ -25,5 +24,5 @@ When /^I convert (.+)$/ do |conversion_statement|
 end
 
 Then /^I should see the conversion result "([^"]*)"$/ do |exp_conversion_result|
-  @results_page.conversion_result.text.should == exp_conversion_result
+  @results_page.conversion_result.should == exp_conversion_result
 end
