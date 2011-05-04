@@ -37,6 +37,8 @@ GEM
       json_pure
       rubyzip
     term-ansicolor (1.0.5)
+    watir-page-helper (0.1.0)
+      watir-webdriver (>= 0.2.0)
     watir-webdriver (0.2.3)
       selenium-webdriver (>= 0.2.0)
 
@@ -45,6 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cucumber
-  rspec
-  watir-webdriver
+  cucumber (> 0)
+  rspec (> 0)
+  watir-page-helper (> 0)
+  watir-webdriver (> 0)

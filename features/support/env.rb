@@ -1,7 +1,7 @@
 TEST_DATA_DIR = "./features/support/test_data"
 
 require 'watir-webdriver'
-require File.dirname(__FILE__)+'/helpers/watir_page_helper'
+require 'watir-page-helper'
 require File.dirname(__FILE__)+'/pages/base_page_class'
 require File.dirname(__FILE__)+'/pages/search_page_class'
 

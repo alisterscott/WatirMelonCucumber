@@ -1,4 +1,5 @@
 source "http://rubygems.org"
-gem "cucumber"
-gem "rspec"
-gem "watir-webdriver"
+gem "cucumber", ">0"
+gem "rspec", ">0"
+gem "watir-webdriver", ">0"
+gem "watir-page-helper", ">0"
