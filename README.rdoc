@@ -1,6 +1,6 @@
 = Intro
 
-This is a simple, working Cucumber + Watir framework, where pages are defined and interacted with.
+This is a simple, working Cucumber + Watir-WebDriver framework, where pages are defined and interacted with.
 
 == Requirements
 * RVM on Mac OSX / Linux
@@ -17,7 +17,7 @@ This is a simple, working Cucumber + Watir framework, where pages are defined an
 
 === Windows
 
-1. Install JRuby, Pik, Bundler and Wac (see my blog post: http://wp.me/p98zF-ca)
-2. Make sure you 'pik' JRuby
+1. Install Ruby, Pik, Bundler and Wac (see my blog post: http://wp.me/p98zF-ca)
+2. Make sure you 'pik' Ruby
 3. In root directory, run 'bundle install'
 4. Then run 'cucumber'

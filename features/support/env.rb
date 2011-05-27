@@ -10,7 +10,7 @@ if ENV["HEADLESS"] then
   capabilities = WebDriver::Remote::Capabilities.htmlunit(:javascript_enabled => true)
   browser = Watir::Browser.new(:remote, :url => "http://127.0.0.1:4444/wd/hub", :desired_capabilities => capabilities)
 else
-  browser = Watir::Browser.new :chrome
+  browser = Watir::Browser.new :firefox
 end
 
 Before do
