@@ -9,12 +9,14 @@ require File.dirname(__FILE__)+'/pages/search_page_class'
 module Browser
   BROWSER = Watir::Browser.new ENV['WEB_DRIVER'] || :firefox
 
+
+
   def visit page_class, &block
     on page_class, true, &block
   end
 
   def on page, visit=false, &block
-    page_class = Object.const_get "#{@site}#{page}Page"
+    page_class = Object.const_get "#{@site}#{page.capitalize}Page"
     page = page_class.new BROWSER, visit
     block.call page if block
     page
