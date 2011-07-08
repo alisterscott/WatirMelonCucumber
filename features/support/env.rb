@@ -1,10 +1,9 @@
 TEST_DATA_DIR = "./features/support/test_data"
+$: << File.dirname(__FILE__)+'/../../lib'
 
 require 'watir-webdriver'
 require 'watir-page-helper'
-require File.dirname(__FILE__)+'/pages/base_page_class'
-require File.dirname(__FILE__)+'/pages/search_page_class'
-
+require 'pages.rb'
 
 module Browser
   BROWSER = Watir::Browser.new ENV['WEB_DRIVER'] || :firefox
