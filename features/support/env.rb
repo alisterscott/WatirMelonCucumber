@@ -8,9 +8,7 @@ require 'pages.rb'
 module Browser
   BROWSER = Watir::Browser.new ENV['WEB_DRIVER'] || :firefox
 
-
-
-  def visit page_class, &block
+ def visit page_class, &block
     on page_class, true, &block
   end
 
