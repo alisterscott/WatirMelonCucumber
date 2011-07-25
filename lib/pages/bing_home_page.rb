@@ -7,7 +7,7 @@ class BingHomePage < SearchPageClass
 
   def search_for term
     self.search = term
-    bing_search
+    self.search_text_field.send_keys :enter
     BingResultsPage.new(@browser)
   end
 
