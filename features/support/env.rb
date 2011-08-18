@@ -13,7 +13,7 @@ module Browser
   end
 
   def on page, visit=false, &block
-    page_class = Object.const_get "#{@site}#{page.capitalize}Page"
+    page_class = Object.const_get "#{@site}#{page.to_s.capitalize}Page"
     page = page_class.new BROWSER, visit
     block.call page if block
     page
