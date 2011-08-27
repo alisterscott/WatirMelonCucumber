@@ -5,6 +5,15 @@ require 'watir-webdriver'
 require 'watir-page-helper'
 require 'pages.rb'
 
+if ENV['HEADLESS']
+  require 'headless'
+  headless = Headless.new
+  headless.start
+  at_exit do
+    headless.destroy
+  end
+end
+
 module Browser
   BROWSER = Watir::Browser.new ENV['WEB_DRIVER'] || :firefox
 
