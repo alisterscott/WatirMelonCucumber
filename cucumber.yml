@@ -1,2 +1,2 @@
 default: -r features --tags ~@wip --color --format pretty --format html -o results.html
-ci  : -r features HEADLESS=TRUE --tags ~@wip --color --format pretty --format html -o results.html
+ci: -r features WEB_DRIVER=firefox --tags ~@wip --format progress --format html -o results.html --format junit -o junit

@@ -36,6 +36,6 @@ end
 
 Then /^I should see the conversion result "([^"]*)"$/ do |exp_conversion_result|
   on :results do |page|
-    page.conversion_result.should == exp_conversion_result
+    page.conversion_result.gsub('metres', 'meters').should == exp_conversion_result
   end
 end

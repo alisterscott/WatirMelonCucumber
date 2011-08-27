@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     builder (3.0.0)
-    childprocess (0.2.1)
+    childprocess (0.2.2)
       ffi (~> 1.0.6)
     cucumber (1.0.2)
       builder (>= 2.1.2)
@@ -12,7 +12,7 @@ GEM
       term-ansicolor (>= 1.0.5)
     diff-lcs (1.1.2)
     ffi (1.0.9)
-    gherkin (2.4.11)
+    gherkin (2.4.16)
       json (>= 1.4.6)
     json (1.5.3)
     json_pure (1.5.3)
@@ -25,7 +25,7 @@ GEM
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
     rubyzip (0.9.4)
-    selenium-webdriver (2.4.0)
+    selenium-webdriver (2.5.0)
       childprocess (>= 0.2.1)
       ffi (>= 1.0.7)
       json_pure
@@ -33,7 +33,7 @@ GEM
     term-ansicolor (1.0.6)
     watir-page-helper (0.2.0)
       watir-webdriver (>= 0.2.0)
-    watir-webdriver (0.3.1)
+    watir-webdriver (0.3.2)
       selenium-webdriver (>= 0.2.2)
 
 PLATFORMS
