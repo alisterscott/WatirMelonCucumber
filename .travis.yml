@@ -1,4 +1,4 @@
-rvm: 1.9.2
+#rvm: 1.9.2
 notifications:
   recipients:
     - alister.scott@gmail.com
