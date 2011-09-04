@@ -6,6 +6,11 @@ require 'watir-page-helper'
 require 'pages.rb'
 
 if ENV['HEADLESS']
+  FileUtils.rm 'results.html' if File.exists? 'results.html'
+  FileUtils.rm_rf 'screenshots' if File.exists? 'screenshots'
+  FileUtils.rm_rf 'junit' if File.exists? 'junit'
+  Dir::mkdir 'junit'
+
   require 'headless'
   headless = Headless.new
   headless.start
