@@ -2,7 +2,7 @@
 
 This is a simple, working Cucumber + Watir-WebDriver framework, where pages are defined and interacted with.
 
-[![Build Status](https://secure.travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)](http://travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME])
+[![Build Status](https://secure.travis-ci.org/alisterscott/WatirMelonCucumber.png)](http://travis-ci.org/alisterscott/WatirMelonCucumner)
 
 # Requirements
 
