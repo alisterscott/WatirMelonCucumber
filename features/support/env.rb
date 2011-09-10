@@ -1,7 +1,9 @@
 TEST_DATA_DIR = "./features/support/test_data"
 $: << File.dirname(__FILE__)+'/../../lib'
 
-require 'watir-webdriver'
+WEB_DRIVER = ( ENV['WEB_DRIVER'] || :firefox ).to_sym
+puts 's'
+WEB_DRIVER == :watir ? require('watir') : require('watir-webdriver')
 require 'watir-page-helper'
 require 'pages.rb'
 
@@ -20,9 +22,9 @@ if ENV['HEADLESS']
 end
 
 module Browser
-  BROWSER = Watir::Browser.new ENV['WEB_DRIVER'] || :firefox
+  BROWSER = (WEB_DRIVER == :watir) ? Watir::Browser.new : Watir::Browser.new(WEB_DRIVER)
 
- def visit page_class, &block
+  def visit page_class, &block
     on page_class, true, &block
   end
 
@@ -36,7 +38,6 @@ module Browser
   def site name
     @site = name
   end
-
 end
 
 World Browser
