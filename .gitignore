@@ -2,3 +2,4 @@ results.html
 .idea/*
 .bundle/*
 junit*
+chromedriver.log

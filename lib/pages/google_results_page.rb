@@ -1,6 +1,6 @@
 class GoogleResultsPage < BasePageClass
 
-  expected_title /.+ - Google Search/
+  expected_title /Google.*/
   expected_element :div, :id => "resultStats"
 
   div :results, :id => "resultStats"

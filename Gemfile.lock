@@ -46,5 +46,6 @@ DEPENDENCIES
   headless (> 0)
   rake
   rspec (> 0)
+  watir
   watir-page-helper (> 0)
   watir-webdriver (> 0)
