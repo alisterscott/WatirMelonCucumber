@@ -9,7 +9,7 @@ class BingResultsPage < BasePageClass
   def number_search_results
     result = /^[\s\w-]* of ([\d,\.]+) results$/.match(results)
     raise "Could not determine number of search results from: '#{results}'" if not result
-    result.captures[0].gsub(",","").to_i
+    result.captures[0].gsub(",","").gsub(".", "").to_i
   end
 
 end

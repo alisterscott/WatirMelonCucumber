@@ -43,6 +43,10 @@ end
 
 World Browser
 
+After do
+  Browser::BROWSER.clear_cookies
+end
+
 at_exit do
   Browser::BROWSER.close
 end
