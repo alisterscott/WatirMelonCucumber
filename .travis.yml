@@ -5,7 +5,7 @@ notifications:
   recipients:
     - alister.scott@gmail.com
 before_script:
-  - travis.sh
+  - /travis.sh
 env:
   - WEB_DRIVER=firefox
   - WEB_DRIVER=chrome
