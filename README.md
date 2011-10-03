@@ -24,3 +24,5 @@ Build Status: [![Build Status](https://secure.travis-ci.org/alisterscott/WatirMe
 2. Make sure you 'pik' Ruby
 3. In root directory, run 'bundle install'
 4. Then run 'rake'
+
+
