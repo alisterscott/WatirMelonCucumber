@@ -7,7 +7,7 @@ class BingResultsPage < BasePageClass
   span :conversion_result, :class => "sc_bigline"
 
   def number_search_results
-    result = /^[\s\w-]* of ([\d,]+) results$/.match(results)
+    result = /^[\s\w-]* of ([\d,\.]+) results$/.match(results)
     raise "Could not determine number of search results from: '#{results}'" if not result
     result.captures[0].gsub(",","").to_i
   end
