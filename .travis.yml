@@ -1,4 +1,11 @@
-#rvm: 1.9.2
+rvm:
+  - 1.9.2
+  - 1.9.3
 notifications:
   recipients:
     - alister.scott@gmail.com
+before_script:
+  - travis.sh
+env:
+  - WEB_DRIVER=firefox
+  - WEB_DRIVER=chrome

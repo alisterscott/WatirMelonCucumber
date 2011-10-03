@@ -2,23 +2,24 @@ TEST_DATA_DIR = "./features/support/test_data"
 $: << File.dirname(__FILE__)+'/../../lib'
 
 WEB_DRIVER = ( ENV['WEB_DRIVER'] || :firefox ).to_sym
-puts 's'
 WEB_DRIVER == :watir ? require('watir') : require('watir-webdriver')
 require 'watir-page-helper'
 require 'pages.rb'
 
-if ENV['HEADLESS']
+if ENV['TRAVIS']
+  ENV['DISPLAY'] = ":99.0"
+
   FileUtils.rm 'results.html' if File.exists? 'results.html'
   FileUtils.rm_rf 'screenshots' if File.exists? 'screenshots'
   FileUtils.rm_rf 'junit' if File.exists? 'junit'
   Dir::mkdir 'junit'
 
-  require 'headless'
-  headless = Headless.new
-  headless.start
-  at_exit do
-    headless.destroy
-  end
+  #require 'headless'
+  #headless = Headless.new
+  #headless.start
+  #at_exit do
+  #  headless.destroy
+  #end
 end
 
 module Browser

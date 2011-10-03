@@ -1,2 +1,2 @@
 default: -r features --tags ~@wip --color --format pretty --format html -o results.html
-ci: -r features HEADLESS=true --tags ~@wip --format progress --format html -o results.html --format junit -o junit
+ci: -r features HEADLESS=true TRAVIS=true --tags ~@wip --format progress --format html -o results.html --format junit -o junit
