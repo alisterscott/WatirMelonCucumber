@@ -9,5 +9,4 @@ if [[ "$WEB_DRIVER" = "chrome" ]]; then
   sudo -s 'curl -L http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux/102682/chrome-linux.test/chromedriver > /usr/bin/chromedriver'
   sudo chmod +x /usr/bin/chromedriver
 fi
-
 sh -e /etc/init.d/xvfb start
