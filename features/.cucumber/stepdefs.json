@@ -1,0 +1,99 @@
+[
+  {
+    "source": "^I am on the (.+) Home Page$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I am on the <search engine> Home Page",
+        "args": [
+          {
+            "offset": 12,
+            "val": "<search engine>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I search for a? ?\"([^\"]*)\"$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I search for \"Watir\"",
+        "args": [
+          {
+            "offset": 14,
+            "val": "Watir"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I search for a?n? ?([^\"].+[^\"])$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I search for a ridiculously small number of results",
+        "args": [
+          {
+            "offset": 15,
+            "val": "ridiculously small number of results"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see at least ([\\d,]+) results$",
+    "flags": "",
+    "steps": [
+
+    ]
+  },
+  {
+    "source": "^I should see at most ([\\d,]+) results$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I should see at most 100 results",
+        "args": [
+          {
+            "offset": 21,
+            "val": "100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I convert (.+)$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I convert 10 cm to inches",
+        "args": [
+          {
+            "offset": 10,
+            "val": "10 cm to inches"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should see the conversion result \"([^\"]*)\"$",
+    "flags": "",
+    "steps": [
+      {
+        "name": "I should see the conversion result \"<as expected>\"",
+        "args": [
+          {
+            "offset": 36,
+            "val": "<as expected>"
+          }
+        ]
+      }
+    ]
+  }
+]

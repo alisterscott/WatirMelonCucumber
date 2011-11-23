@@ -1,2 +1,2 @@
-default: -r features --tags ~@wip --color --format pretty --format html -o results.html
+default: -r features --tags ~@wip --color --format pretty --format html -o results.html --dotcucumber features/.cucumber
 ci: -r features HEADLESS=true TRAVIS=true --tags ~@wip --format progress --format html -o results.html --format junit -o junit
