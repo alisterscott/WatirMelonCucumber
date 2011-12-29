@@ -23,7 +23,7 @@ Feature: Internet Search
   Scenario Outline: Do a search using data specified externally
     Given I am on the <search engine> Home Page
     When I search for a ridiculously small number of results
-    Then I should see at most 100 results
+    Then I should see at most 200 results
     Scenarios:
       | search engine |
       | Google        |

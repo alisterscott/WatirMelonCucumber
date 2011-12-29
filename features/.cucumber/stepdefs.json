@@ -56,11 +56,11 @@
     "flags": "",
     "steps": [
       {
-        "name": "I should see at most 100 results",
+        "name": "I should see at most 200 results",
         "args": [
           {
             "offset": 21,
-            "val": "100"
+            "val": "200"
           }
         ]
       }
