@@ -7,4 +7,4 @@ before_script:
   - ./travis.sh
 env:
   - WEB_DRIVER=firefox
-  - WEB_DRIVER=chrome
+#  - WEB_DRIVER=chrome
