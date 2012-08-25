@@ -18,7 +18,8 @@ Feature: Internet Search
     Then I should see the conversion result "<as expected>"
     Scenarios:
       | search engine | as expected                         |
-      | Google        | 10 centimeters = 3.93700787 inches  |
+      | Google        | 10 Centimeter = 3.93701 Inch        |
+      | Bing          | 10 centimeters = 3.93700787 inches  |
      
   Scenario Outline: Do a search using data specified externally
     Given I am on the <search engine> Home Page

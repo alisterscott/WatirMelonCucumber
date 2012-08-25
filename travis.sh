@@ -9,4 +9,5 @@ if [[ "$WEB_DRIVER" = "chrome" ]]; then
   sudo -s 'curl -L http://chromium.googlecode.com/files/chromedriver_linux32_17.0.963.0.zip > /usr/bin/chromedriver'
   sudo chmod +x /usr/bin/chromedriver
 fi
+
 sh -e /etc/init.d/xvfb start
