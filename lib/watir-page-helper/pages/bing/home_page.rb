@@ -4,19 +4,16 @@ module WatirPageHelper::Bing
   module HomePage
     extend WatirPageHelper::ClassMethods
 
-    direct_url "http://www.bing.com/"
+    # no country redirect link, since travis-ci ends up getting sent to the german site
+    direct_url "http://www.bing.com/?scope=web&setmkt=en-US&setlang=match&FORM=W5WA&uid=30302BA1"
     expected_title "Bing"
 
     text_field :search, :name => "q"
     button :bing_search, :name => 'go'
-    link :switch_to_english, :text => 'English'
 
     def search_for term
-      switch_to_english if switch_to_english_link.exists?
-
       self.search_text_field.when_present.set term
       self.search_text_field.respond_to?(:send_keys) ? self.search_text_field.send_keys(:enter) : @browser.send_keys('{ENTER}')
     end
-
   end
 end

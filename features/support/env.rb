@@ -12,6 +12,17 @@ After do
   WatirPageHelper.browser.cookies.clear
 end
 
-at_exit do
-  WatirPageHelper.close
+if ENV['HEADLESS'] == 'true'
+  require 'headless'
+
+  headless = Headless.new
+  headless.start
+
+  at_exit do
+    headless.destroy
+  end
+else
+  at_exit do
+    WatirPageHelper.close
+  end
 end
