@@ -1,2 +1,2 @@
 rvm_install_on_use_flag=1
-rvm --create use ruby-1.9.2@watirmelon-cucumber
+rvm --create use ruby-1.9.3@watirmelon-cucumber
